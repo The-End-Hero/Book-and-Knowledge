@@ -8,8 +8,49 @@
 ### 绑定
 
 - 默认绑定(优先级最低)
+
+  - 在严格模式下,全局对象将无法使用默认绑定,因为this会绑定undefined
+
 - 隐式绑定
+
+  - 隐式绑定会把函数调用中的this绑定到这个上下文对象.(对象属性引用链最后一层影响调用位置)
+
+    - ```javascript
+      //隐式丢失
+      function foo(){
+        console.log(this.a)
+      }
+      var obj={
+        a:2,
+        foo:foo
+      }
+      var bar =obj.foo
+      var a="aaa"//a是全局的属性,引用的是foo函数本身,变成默认绑定
+      bar()//结果"aaa"bar()是一个不带任何修饰的函数调用
+      ```
+
+    - ```javascript
+      function foo(){
+        console.log(this.a)
+      }
+      function doFoo(fn){
+        fn()
+      }
+      var obj={
+        a:2,
+        foo:foo
+      }
+      var a='aaa'//a是全局的属性
+      doFoo(obj.foo)//'aaa'参数传递其实是一种隐式赋值,doFoo因为传参中隐式赋值的存在,依然是不带修饰的函数调用.
+      ```
+
 - 显式绑定
+
+  - 想在某个对象上强制屌用函数,使用函数的call(...)和apply(...)方法.(它们的第一个参数是一个对象,他们会把这个对象绑定到this)这就是**显式绑定**
+  - 通过foo.call(...),我们可以在调用foo时强制把它的this绑定到call()第一个参数上.
+  - 如果你在call()传入一个原始值(字符串类型,布尔类型或者数字类型)来作为this的绑定对象,那么原始值会被转换成它的对象形式.这就是**装箱**
+    - 硬绑定
+
 - new绑定(优先级最高)
 
 ### 绑定例外
