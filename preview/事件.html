@@ -1,0 +1,188 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:事件</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="-">事件的基础知识</h1>
+<h2 id="1-">1 常用的事件</h2>
+<blockquote>
+<p>click / dblclick / mouseenter/mouseleave / mouseover/mouseout</p>
+<p>mousedown/mouseup/mousemove</p>
+<p>keydown/keypress/keyup</p>
+<p>focus/blur/change/</p>
+<p>load/scroll/resize</p>
+</blockquote>
+<h2 id="2-">2 绑定事件的几种方式</h2>
+<p>1 on+事件名称 通过html属性来绑定事件</p>
+<p>​    1.1 将HTML结构与事件绑定（行为）揉杂到一起</p>
+<p>​    1.2 这种方式只能从全局环境中查找函数，容易造成全局污染的问题</p>
+<p>2 node.onclick 通过onclick属性绑定事件</p>
+<p>​    优势：几乎所有的浏览器都支持这种绑定事件的方式</p>
+<p>​    dv.onclick = function() {}</p>
+<p>​    dv.onclick = function() {}</p>
+<p>​    如果绑定多次事件，后面的事件会把前面绑定的事件覆盖</p>
+<p>3 addEventListener()        W3C标准的绑定事件的方式</p>
+<p>​    node.addEventListener(eventName, handler, useCapture)</p>
+<p>​    eventName : 要绑定的事件类型</p>
+<p>​    handler： 事件处理程序</p>
+<p>​    第三个参数：是一个布尔值，默认值为 false</p>
+<p>​    表示 是冒泡还是捕获</p>
+<p>​    如果是true：捕获阶段</p>
+<p>​    false或者不传入：冒泡阶段</p>
+<p>​    浏览器支持：IE9+ 、Chrome、Firefox。。。</p>
+<p>4 attachEvent()            IE中提供的绑定事件的方式</p>
+<p>​    node.attachEvent(&quot;on&quot; + eventName, handler)</p>
+<p>​    第一个参数：绑定事件的名称，需要使用 &quot;on&quot; 前缀</p>
+<p>​    第二个参数：事件处理程序</p>
+<p>​    浏览器支持：IE6-IE10</p>
+<h2 id="3-">3 事件的三个阶段</h2>
+<p>​    1 处于事件捕获阶段</p>
+<p>​        从外向里进行捕获：html -&gt; body -&gt; div -&gt; span</p>
+<p>​    2 处于目标对象阶段</p>
+<p>​        执行绑定的事件</p>
+<p>​    3 处于冒泡阶段</p>
+<p>​        从里向外进行冒泡：span -&gt; div -&gt; body -&gt; html</p>
+<p>标准的事件绑定方式addEventListener，支持三个阶段！</p>
+<p>IE中的 attachEvent 事件绑定方式，不支持捕获阶段！</p>
+<h2 id="4-">4 事件解绑</h2>
+<p>1 onclick = null</p>
+<p>2 removeEventListener(eventName, handler, capture)</p>
+<p>3 detachEvent(&quot;on&quot; + eventName, handler)</p>
+<h2 id="5-">5 事件对象</h2>
+<p>什么是事件对象？ 跟当前绑定的事件向关联的对象</p>
+<p>事件对象中能够获取到的就是跟 当前事件相关的属性或方法</p>
+<p>1 dv.onclick = function(event) {</p>
+<p>Chrome/Firefox浏览器中直接通过 事件处理程序的参数就能够获取到事件对象</p>
+<p>IE浏览器中需要使用 window.event 来获取事件对象</p>
+<p>不同的浏览器中，事件对象中的属性也可能是不同的！</p>
+<p>event = event || window.event;</p>
+<p>}</p>
+<p>2 dv.addEventListener(&quot;click&quot;, function(event) {</p>
+<p>直接通过 事件处理程序的 参数来获取到事件对象</p>
+<p>})</p>
+<p>3 dv.attachEvent(&quot;onclick&quot;, function() {</p>
+<pre><code class="lang-JavaScript">通过 window.event 来获取到事件对象！
+})
+
+6 阻止事件冒泡和浏览器的默认行为
+阻止浏览器的默认行为：
+   1 return false;
+   2 标准方法：event.preventDefault();
+   3 IE中：    event.returnValue = false;
+
+取消冒泡
+   1 标准： event.stopPropagation();
+   2 IE:    event.cancelBubble = true;
+</code></pre>
+<pre><code class="lang-JavaScript">document.getElementById(&#39;dv&#39;).onclick = function() {
+   alert(&quot;欢迎你！&quot;);
+};
+
+document.getElementsByTagName(&#39;a&#39;)[0].onclick = function() {
+   // 作用：阻止浏览器的默认行为！
+   return false;
+};
+
+ 7 jQuery中绑定事件的方式
+ 1 on  (1.7+)
+ 2 bind
+ 3 delegate
+ 4 live
+
+ 8 jQuery中的事件解绑
+ off  -&gt; on
+ unbind -&gt; bind
+ undelegate -&gt; delegate
+
+ jQuery中绑定的事件 可以通过 return false 来实现 阻止默认行为和取消事件冒泡！
+</code></pre>
+<h3 id="-">其他的一些问题</h3>
+<ul>
+<li><p>不是所有的事件都能冒泡。以下事件不冒泡：blur、focus、load、unload.</p>
+<p>​</p>
+</li>
+</ul>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
