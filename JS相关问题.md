@@ -21,3 +21,8 @@ return false
 - cb回调
 - return流
 - gulp-sequence插件
+
+4.document.write和innerHTML区别
+
+- document.write会触发浏览器重绘重排，性能问题。
+- innerHTML是DOM页面元素的一个属性。可以精确的定位元素来修改
