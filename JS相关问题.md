@@ -44,3 +44,12 @@ function deepClone(obj){
 -ms代表IE浏览器私有属性
 -webkit代表chrome、safari私有属性 IE使用的是Trident内核，Firefox 使用的是Gecko内核。目前使用IE内核的浏览器还有搜狗，遨游，360等等。
 ```
+
+7.cookie相关
+
+客户端保存了不同服务器的cookie，每个服务器只能获取对应的cookie，而不能获取全部的
+
+```
+1.cookie是保存在客户端的
+2.cookie是通过http请求报头传到服务器端
+```
