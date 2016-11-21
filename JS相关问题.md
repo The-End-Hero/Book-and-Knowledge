@@ -49,6 +49,10 @@ function deepClone(obj){
 
 客户端保存了不同服务器的cookie，每个服务器只能获取对应的cookie，而不能获取全部的
 
+Cookie就是[服务器](http://www.zzbaike.com/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8)暂存放在你的电脑里的资料（.txt格式的文本文件），通过在[HTTP](http://www.zzbaike.com/wiki/HTTP)传输中的状态好让服务器用来辨认你的计算机。当你在浏览网站的时候，[Web](http://www.zzbaike.com/wiki/Web)服务器会先送一小小资料放在你的计算机上，Cookie 会帮你在网站上所打的文字或是一些选择都记录下来。当下次你再访问同一个网站，Web服务器会先看看有没有它上次留下的Cookie资料，有的话，就会依据Cookie里的内容来判断使用者，送出特定的[网页](http://www.zzbaike.com/wiki/%E7%BD%91%E9%A1%B5)内容给你。
+
+    http请求是指从客户端到[服务器](http://baike.baidu.com/view/899.htm)端的请求消息。包括：消息首行中，对资源的请求方法、资源的标识符及使用的协议。
+
 ```
 1.cookie是保存在客户端的
 2.cookie是通过http请求报头传到服务器端
