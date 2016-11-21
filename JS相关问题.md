@@ -25,4 +25,15 @@ return false
 4.document.write和innerHTML区别
 
 - document.write会触发浏览器重绘重排，性能问题。
-- innerHTML是DOM页面元素的一个属性。可以精确的定位元素来修改
+- innerHTML是DOM页面元素的一个属性。可以精确的定位元素来修改。
+
+5.js如何对一个对象进行深度克隆
+
+```javascript
+function deepClone(obj){
+        var str = JSON.sringify(obj);
+        var newobj = JSON.parse(str);
+        return newobj;
+    }
+```
+
