@@ -37,3 +37,10 @@ function deepClone(obj){
     }
 ```
 
+6.一般需判断浏览器类型，需通过userAgent中获取浏览器内核
+
+```
+-moz代表firefox浏览器私有属性
+-ms代表IE浏览器私有属性
+-webkit代表chrome、safari私有属性 IE使用的是Trident内核，Firefox 使用的是Gecko内核。目前使用IE内核的浏览器还有搜狗，遨游，360等等。
+```
