@@ -186,7 +186,6 @@ MSPointerUp——当手指离开屏幕时触发
 fastclick可以解决在手机上点击事件的300ms延迟
 
 zepto的touch模块，tap事件也是为了解决在click的延迟问题
-
 ```
 
 ### 8.Rentina显示屏原理以及设计方案
@@ -394,7 +393,7 @@ body { -webkit-text-size-adjust:100%!important; }
 //最好的解决方案：最好使用rem或百分比布局
 ```
 
-### 16.定位的坑
+### 16.定位的坑!!
 
 ```html
 //fixed定位
