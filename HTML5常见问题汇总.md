@@ -507,7 +507,13 @@ android 4.x
 
 
 
- 
+ 22.a标签可以解析URL
+
+
+
+23.websocket
+
+基于TCP/IP的新协议，不同于http协议，双工，消息推送。
 
 
 
