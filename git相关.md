@@ -13,3 +13,7 @@ git checkout -b 本地分支名称 origin/远程分支名称//拉取远程分支
 git status       //查看修改的代码
 
 git clone 地址  //克隆项目
+
+git status       //查看修改了什么文件
+
+git pull  xxxxxx  //拉取远程分支代码并且合并-->相当于fetch+merge
