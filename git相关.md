@@ -17,3 +17,6 @@ git clone 地址  //克隆项目
 git status       //查看修改了什么文件
 
 git pull  xxxxxx  //拉取远程分支代码并且合并-->相当于fetch+merge
+
+git checkout -b xxxxx  //基于当前分支，创建xxxxx分支，并且切换到xxxxx分支上去
+
