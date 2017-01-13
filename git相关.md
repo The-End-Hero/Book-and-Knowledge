@@ -20,3 +20,7 @@ git pull  xxxxxx  //拉取远程分支代码并且合并-->相当于fetch+merge
 
 git checkout -b xxxxx  //基于当前分支，创建xxxxx分支，并且切换到xxxxx分支上去
 
+git stash 隐藏需要commit的内容 git stash pop 释放这些隐藏
+
+git checkout xxxxxx（git status 出来的项目）隐藏掉这部分提交
+
