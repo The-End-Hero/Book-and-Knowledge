@@ -28,3 +28,6 @@ git stash list  //显示被隐藏的内容
 
 git checkout xxxxxx（git status 出来的项目）//去掉这部分提交
 
+git branch -d xxxxx 删除xxxxx分支
+
+git branch -D xxxxx 强制删除xxxxx分支
