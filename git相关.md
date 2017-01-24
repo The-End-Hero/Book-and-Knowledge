@@ -1,4 +1,6 @@
-git add .      //添加所有改动代码
+git add -u     //添加已存在的文件，比如新建的文件就不提交
+
+git add .      //添加所有改动代码
 
 git commit -m “这是说明”   //commit代码说明
 
