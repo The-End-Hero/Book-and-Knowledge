@@ -1,7 +1,3 @@
-# 初入react世界
-
-函数式编程才是React的精髓.
-
 ### JSX
 
 JSX是第三方标准,但是这套标准适合任何一套框架
@@ -21,9 +17,8 @@ JSX的官方定义是类XML语法的ECMAScript扩展
 - Boolean值,如果不写默认false,写了未定义,默认true
 - 展开属性-->ES6rest/spread特性
 - JSX是HTML和JavaScript混写的语法，当遇到**<**，JSX就当HTML解析，遇到**{**就当JavaScript解析.
-- ​
-
-
+- 自定义属性,data-xxx,aria-xxx
+- 防止XSS攻击,html被转义,如果实在是需要的话,可以使用dangerouslySetInnerHTML属性.
 
 
 
