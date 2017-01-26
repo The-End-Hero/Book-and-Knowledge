@@ -11,10 +11,10 @@ JSX的官方定义是类XML语法的ECMAScript扩展
 - 小写首字母对应DOM元素,而**组件**元素对应**大写**首字母
 - 在一个组件的子元素位置使用注释要用{}包起来.
 - 条件注释(例如IE兼容),JavaScript判断浏览器版本来替代
-- DOCTYPE-->保存变量,渲染后串起来.
+- DOCTYPE-->保存变量,渲染后**串**起来.
 - class-->className    for-->htmlFor    JS的 关键字
 - 些自定义属性的时候由标准写法改为小驼峰写法(data-id-->dataId)
-- Boolean值,如果不写默认false,写了未定义,默认true
+- Boolean值,如果**不写默认false**,写了**未定义,默认true**
 - 展开属性-->ES6rest/spread特性
 - JSX是HTML和JavaScript混写的语法，当遇到**<**，JSX就当HTML解析，遇到**{**就当JavaScript解析.
 - 自定义属性,data-xxx,aria-xxx
