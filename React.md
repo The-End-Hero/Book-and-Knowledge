@@ -24,6 +24,7 @@ JSX的官方定义是类XML语法的ECMAScript扩展
 - 真实DOM节点  虚拟DOM节点,DOM diff算法,目前大量使用,减少重排重绘.在很多时候需要获取DOM的真实节点,得到类似用户输入信息.我们需要用到ref属性,this.ref.[xxx]是获取的真实DOM,需要等虚拟DOM插入后才能使用,否则会报错.  所以可以利用事件回调函数.
 - React 组件支持很多事件，除了 `Click` 事件以外，还有 `KeyDown` 、`Copy`、`Scroll` 等，完整的事件清单请查看[官方文档](http://facebook.github.io/react/docs/events.html#supported-events)。
 - 由于 `this.props` 和 `this.state` 都用于描述组件的特性，可能会产生混淆。一个简单的区分方法是，`this.props` 表示那些一旦定义，就不再改变的特性，而 `this.state` 是会随着用户互动而产生变化的特性。
+- 组件的数据来源，通常是通过 Ajax 请求从服务器获取，可以使用 `componentDidMount` 方法设置 Ajax 请求，等到请求成功，再用 `this.setState` 方法重新渲染 UI 
 
 
 
