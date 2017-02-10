@@ -1,11 +1,11 @@
-ES6
+# ES6
 
-let/const
+### let/const
 
 
 
-箭头函数 
+### 箭头函数 
 
-promise 
+### promise 
 
-aysc函数
+### aysc函数
