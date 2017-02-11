@@ -9,3 +9,8 @@
 ### promise 
 
 ### aysc函数
+
+### Proxy
+
+
+
