@@ -8,6 +8,8 @@
 
 ### 箭头函数 
 
+- this的问题
+
 ### promise 
 
 ### aysc函数
