@@ -12,6 +12,9 @@
 
 ### promise 
 
+- 三种状态(Pending进行中,Resolved已完成,Rejected已失败)
+- Promise代表一个异步操作
+
 ### aysc函数
 
 ### Proxy
