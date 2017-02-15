@@ -4,7 +4,7 @@ JSX是第三方标准,但是这套标准适合任何一套框架
 
 JSTransform(react官方,不再维护),全部采用babel的JSX编译器
 
-JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack下，className／for非必要。)
+JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack等强大的工具下，className／for非必要。)
 
 - 定义标签是只允许被一个标签包裹
 - 标签一定要闭合,**只能有一个顶层标签**.
@@ -29,7 +29,21 @@ JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack下，class
 
 
 
+### 组件生命周期
 
+#### 三种状态
+
+- Mounting：已插入真实DOM
+- Updating：正在被重新渲染
+- Unmouting：已移出真实DOM
+
+每种状态下有两种处理函数will和did
+
+- componentWillMount()
+- componentDidMount()
+- componentWillUpdate(object nextProps, object nextState)
+- componentDidUpdate(object prevProps, object prevState)
+- componentWillUnmount()
 
 
 
