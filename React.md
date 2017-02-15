@@ -48,6 +48,14 @@ JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack等强大�
 
 
 
+### redux
+
+进行数据管理
+
+react-redux是核心文件
+
+
+
 
 
 
