@@ -1,4 +1,4 @@
-### JSX
+###  JSX
 
 JSX是第三方标准,但是这套标准适合任何一套框架
 
@@ -53,6 +53,10 @@ JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack等强大�
 进行状态管理
 
 组件之间的通信-->父子/兄弟
+
+基于flux
+
+整个react都是所谓的状态驱动UI改变
 
 react-redux是核心文件
 
