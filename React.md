@@ -66,15 +66,9 @@ express服务
 
 转发api-->json
 
-ssr服务器渲染
+ssr服务器渲染(Server Side Render)
 
-
-
-
-
-
-
-
+![SSR](C:\GitHub\BOOK-and-knowledge-point\images\SSR.png)
 
 
 
