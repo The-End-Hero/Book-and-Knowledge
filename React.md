@@ -70,5 +70,13 @@ ssr服务器渲染(Server Side Render)
 
 ![SSR](C:\GitHub\BOOK-and-knowledge-point\images\SSR.png)
 
+### route
 
+单页面应用(SPA)
+
+基于History
+
+按需加载
+
+Link标签(to,query,hash,然后内部实现组成a标签的href)--->a标签
 
