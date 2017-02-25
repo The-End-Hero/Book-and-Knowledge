@@ -54,6 +54,10 @@ JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack等强大�
 
 组件之间的通信-->父子/兄弟
 
+- 只有两层的情况,父组件全部使用state数据源(方便维护),在子组件中可以使用props,这样父组件setState,子组件全部改变.
+- 子组件利用回调改变父组件的state值,再进行setState
+- setState本身是异步的,直接console.log  未改变值
+
 基于flux
 
 整个react都是所谓的状态驱动UI改变
