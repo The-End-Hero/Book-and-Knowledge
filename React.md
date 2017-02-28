@@ -86,3 +86,17 @@ react-route---->(maybe)react-keep
 
 Link标签(to,query,hash,然后内部实现组成a标签的href)--->a标签
 
+
+
+### 事件
+
+直接console.log出来并没有什么卵用
+
+onClick  
+
+- target----事件触发目标的dom元素,已经能点击了,必然不是虚拟DOM
+
+onTouchXXX
+
+- touch-----pageX,Y   clientX,Y
+
