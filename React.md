@@ -100,3 +100,5 @@ onTouchXXX
 
 - touch-----pageX,Y   clientX,Y
 
+
+性能上,绑定this,写在constructor里面
