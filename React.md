@@ -84,7 +84,7 @@ react-route---->(maybe)react-keep
 
 按需加载
 
-Link标签(to,query,hash,然后内部实现组成a标签的href)--->a标签
+Link标签(to,query,hash,然后内部实现组成a标签的href)--->a标签    需要传递多值的时候,可以考虑使localstorage
 
 
 
