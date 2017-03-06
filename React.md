@@ -40,7 +40,7 @@ JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack等强大�
 每种状态下有两种处理函数will和did
 
 - componentWillMount()
-- componentDidMount()
+- componentDidMount()   只会执行一次,不会反复
 - componentWillUpdate(object nextProps, object nextState)
 - componentDidUpdate(object prevProps, object prevState)
 - componentWillUnmount()
