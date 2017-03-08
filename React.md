@@ -86,6 +86,8 @@ react-route---->(maybe)react-keep
 
 Link标签(to,query,hash,然后内部实现组成a标签的href)--->a标签    需要传递多值的时候,可以考虑使localstorage
 
+多页面路由之间可以使用localStorge进行传值.
+
 
 
 ### 事件
