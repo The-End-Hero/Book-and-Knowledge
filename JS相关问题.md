@@ -34,7 +34,7 @@ function deepClone(obj){
         var str = JSON.sringify(obj);
         var newobj = JSON.parse(str);
         return newobj;
-    }
+    } //这不是JSON字符串和对象互相转化么.......
 ```
 
 6.一般需判断浏览器类型，需通过userAgent中获取浏览器内核
@@ -57,3 +57,4 @@ Cookie就是[服务器](http://www.zzbaike.com/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8)
 1.cookie是保存在客户端的
 2.cookie是通过http请求报头传到服务器端
 ```
+8.事件委托性能优于循环.
