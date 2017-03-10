@@ -132,12 +132,12 @@ React 生态提供了很多选择方案，这里我们选用 [Redux](http://rack
 - Store 对应的状态树（State），由调用一个 reducer 函数（root reducer）生成
 - 状态树上的每个字段都可以进一步由不同的 reducer 函数生成
 - Store 包含了几个方法比如 `dispatch`, `getState` 来处理数据流
-- Store 的状态树只能由 `dispatch(action)` 来触发更改
+- Store 的状态树只能由 `dispatch(action)` 来触发更改 !!!!!!!!!非常重要
 
 Redux 的数据流：
 
 - action 是一个包含 `{ type, payload }` 的对象
-- reducer 函数通过 `store.dispatch(action)` 触发
+- reducer 函数通过 `store.dispatch(action)` 触发    !!!!!!!!!非常重要
 - reducer 函数接受 `(state, action)` 两个参数，返回一个新的 state
 - reducer 函数判断 `action.type` 然后处理对应的 `action.payload` 数据来更新状态树
 
