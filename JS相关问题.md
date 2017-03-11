@@ -57,4 +57,7 @@ Cookie就是[服务器](http://www.zzbaike.com/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8)
 1.cookie是保存在客户端的
 2.cookie是通过http请求报头传到服务器端
 ```
-8.事件委托性能优于循环.
+8.事件委托性能优于循环,即jQuery中的on所用的事件委托和事件队列机制.
+
+# JS异步机制
+
