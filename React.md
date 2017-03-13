@@ -92,9 +92,7 @@ Link标签(to,query,hash,然后内部实现组成a标签的href)--->a标签    �
 
 ### 事件
 
-直接console.log出来并没有什么卵用
-
-onClick  
+onClick={this.click()}  
 
 - target----事件触发目标的dom元素,已经能点击了,必然不是虚拟DOM
 
@@ -103,7 +101,7 @@ onTouchXXX
 - touch-----pageX,Y   clientX,Y
 
 
-性能上,绑定this,写在constructor里面
+性能上,绑定this,写在constructor里面性能更加好.
 
 
 
