@@ -181,6 +181,10 @@ export default routes;
 
 Store 是由 reducer 产生的，所以 reducer 实际上反映了 Store 的状态树结构
 
+**总而言之一句话，redux当中的reducer之所以叫做reducer，是因为它和 Array.prototype.reduce 当中传入的回调函数非常相似。**
+
+Reducer可被翻译为折叠器.(余博伦)
+
 `./reducers/index.js`
 
 ```
