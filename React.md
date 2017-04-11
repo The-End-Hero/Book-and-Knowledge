@@ -109,7 +109,7 @@ onTouchXXX
 
 # React服务端渲染
 
-React 提供了两个方法(react-dom核心包) `renderToString` 和 `renderToStaticMarkup` 用来将组件（Virtual DOM）输出成 HTML 字符串，这是 React 服务器端渲染的基础，它移除了服务器端对于浏览器环境的依赖，所以让服务器端渲染变成了一件有吸引力的事情。
+React 提供了两个方法(react-dom核心包) `renderToString` 和 `renderToStaticMarkup`(renderToString把React元素转成一个HTML字符串并在服务端标识reactid, renderToStaticMarkup相当于简化版的renderToString,建议使用该方法,减少大批的reactud,DOM精简很多,在IO流传输上节省了流量.) 用来将组件（Virtual DOM）输出成 HTML 字符串，这是 React 服务器端渲染的基础，它移除了服务器端对于浏览器环境的依赖，所以让服务器端渲染变成了一件有吸引力的事情。
 
 服务器端渲染除了要解决对浏览器环境的依赖，还要解决两个问题：
 
