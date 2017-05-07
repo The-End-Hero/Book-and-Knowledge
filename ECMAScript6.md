@@ -52,6 +52,4 @@ react目前已经推荐使用class写法,比如 class Pop extend Component{//你
 
 ### 结构数据
 
-
-
-
+##### 1.   ...   --->展开数组/对象
