@@ -507,13 +507,17 @@ android 4.x
 
 
 
- 22.a标签可以解析URL
+### 22.a标签可以解析URL
 
 
 
-23.websocket
+### 23.websocket
 
 基于TCP/IP的新协议，不同于http协议，双工，消息推送。
+
+### 24.vertical-align和line-height 关系 ， 解决img在div中多间隙的。几乎所有行内布局问题，都是这两个属性搞出来的鬼。
+1. http://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/
+2. https://zhuanlan.zhihu.com/p/26725189
 
 
 
