@@ -40,10 +40,18 @@ JSX的官方定义是类XML语法的ECMAScript扩展(然而在webpack等强大�
 每种状态下有两种处理函数will和did
 
 - componentWillMount()
+
 - componentDidMount()   只会执行一次,不会反复
+
 - componentWillUpdate(object nextProps, object nextState)
+
 - componentDidUpdate(object prevProps, object prevState)
+
 - componentWillUnmount()
+
+  - 只有外部jsx中没渲染该组件，则该组件会 unmount ，内部是不能直接控制 unmount，这样会逻辑混乱的.(外部判断)
+
+  ​
 
 
 
