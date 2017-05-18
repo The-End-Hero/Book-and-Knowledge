@@ -64,6 +64,59 @@
 
 ## 字典
 
+- 就是js的对象{}
+
+- 字典内部的顺序无所谓
+
+- ```python
+  # 获取字典的值 和js不同的是用[]获取
+  alien_0 = {'color': 'green'}
+  print(alien_0['color'])
+
+  #添加键-值对 和js不同的是[]直接出来  
+  alien_0 = {'color': 'green'}
+  alien_0['points'] = 5
+  print(alien_0['points'])
+
+  # 创建空字典  类似js创建对象字面量
+
+  # 修改字典中的值
+  alien_0 = {'color': 'green'}
+  print("The alien is " + alien_0['color'] + ".")
+  alien_0['color'] = 'yellow'
+  print("The alien is now " + alien_0['color'] + ".")
+
+  # 删除键-值对 使用del语句
+  alien_0 = {'color': 'green', 'points': 5}
+  print(alien_0)
+  del alien_0['points']
+  print(alien_0)
+
+  # 遍历字典  顺序与存储数据未必相同
+  user_0 = {
+  'username': 'efermi',
+  'first': 'enrico',
+  'last': 'fermi',
+  }
+  # Python 字典(Dictionary) items() 函数以列表返回可遍历的(键, 值) 元组数组。
+  for key, value in user_0.items():
+  	print("\nKey: " + key)
+  	print("Value: " + value)
+
+  # 字典的values()方法,返回一个值列表  集合(set)去重  
+  favorite_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python',
+  }
+  print("The following languages have been mentioned:")
+  for language in set(favorite_languages.values()):
+  	print(language.title())    
+  ```
+- for遍历
+
+
 ## 用户输入 while循环
 
 ## 函数
