@@ -140,3 +140,43 @@ debouceExample();
 debouceExample();
 debouceExample();
 ```
+
+闭包
+
+```javascript
+var a = 0;
+var b = 0;
+function A(a) {
+    A = function(b) {
+        console.log('a+b=' + (a + b++));
+    }
+    console.log('a=' + a++);
+}
+// 第一次调用A时，执行到console.log('a=' + a++)时，a已经完成自加，此时a的值为2，a++的值为1。
+A(1);
+// 第二次调用A时，A已经被重新赋值，指向了一个新的函数引用；
+// 由于标识符A是在全局作用域定义的，所以在函数内部被重新赋值，在全局作用域也可以访问到重新赋值后的函数。此时，也创建了一个闭包，该闭包保存了创建环境的活动对象。
+// 此时活动对象：{ a: 2 }，同时，根据传入的数值2,确定 b = 2，b++值为3。
+// 执行到 console.log('a+b=' + (a + b++))，故而输出4
+A(2);
+
+
+var a = 0;
+    var b = 0;
+
+    function A(a) {
+        B = function(b) {
+            console.log('a+b=' + (a + b++));
+        }
+        console.log('a=' + a++);
+    }
+    A(1);
+    B(2);//这样你应该可以看得明白点
+
+```
+
+js实现：一个数组，把奇数放到右边，偶数放到左边，不许使用额外空间。
+
+```javascript
+let A = arr=>arr.sort(x=>x % 2 == 0)
+```
