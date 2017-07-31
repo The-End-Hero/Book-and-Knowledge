@@ -35,3 +35,23 @@ git branch -d xxxxx 删除xxxxx分支
 git branch -D xxxxx 强制删除xxxxx分支
 
 cherry-pick 将其他分支已经commit过的头 加在当前分支上
+
+#### 撤销pull
+
+git reflog命令查看你的历史变更记录，然后可以使用git reset --hard HEAD@{n}，（n是你要回退到的引用位置）回退。
+
+#### 1. 删除本地分支
+
+假设想要删除本地的分支temp，并且当前处在temp分支上，首先需要切换到别的分支（假设切换到develop分支）：
+
+git checkout develop  //切换到develop分支
+
+git branch  //此时处在develop分支
+
+git branch -D temp  //删除本地temp分支
+
+##### 2.重新拉取远程仓库代码，并自动创建分支
+
+git fetch 会将远程代码的更新(commit)拉取到本地。
+
+git fetch origin temp:temp  //拉取远程库temp分支的代码到本地的temp分支，如果不存在temp分支，将自动创建temp分支
