@@ -34,7 +34,7 @@ git branch -d xxxxx 删除xxxxx分支
 
 git branch -D xxxxx 强制删除xxxxx分支
 
-cherry-pick 将其他分支已经commit过的头 加在当前分支上
+cherry-pick 将其他分支已经commit过的头 加在当前分支上(相当于把某一个commit改动的代码添加在其他分支上)
 
 #### 撤销pull
 
