@@ -110,3 +110,14 @@ git fetch origin temp:temp  //拉取远程库temp分支的代码到本地的temp
 
 git不支持直接删除Submodule，手动删除即可（子模块文件夹以及子模块配置信息）
 
+
+
+
+
+
+
+
+
+git-flow规范
+
+![git-workflow-release-cycle-2feature](/Users/wangxiping/Documents/github/Book-and-Knowledge/images/git-workflow-release-cycle-2feature.png)
